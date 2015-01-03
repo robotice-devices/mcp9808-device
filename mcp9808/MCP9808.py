@@ -9,8 +9,10 @@ class MCP9808(object):
 
         # Assert it's the right thing
         val = hex(self._i2c.reverseByteOrder(self._i2c.readU16(0x06)))
+        print val
         assert val == 0x54, 'Not right manufacturer'
         val = hex(self._i2c.reverseByteOrder(self._i2c.readU16(0x07)))
+        print val
         assert val == 0x4, 'Not right device ID'
 
     def read_temp_c(self):
