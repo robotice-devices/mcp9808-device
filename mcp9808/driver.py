@@ -1,6 +1,8 @@
 #!/srv/robotice/bin/python
 
 import sys
+import logging
+
 from oslo.config import cfg
 from oslo.config import types
 
@@ -8,6 +10,8 @@ try:
     import sensor
 except Exception, e:
     raise e
+
+logging.basicConfig()
 
 common_opts = [
     cfg.Opt('name',

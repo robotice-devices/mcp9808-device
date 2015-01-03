@@ -22,7 +22,8 @@ Read more
 =========
 
 * https://learn.adafruit.com/mcp9808-temperature-sensor-python-library?view=all
-* https://github.com/adafruit/Adafruit_Python_MCP9808 - This lib is used as a source
+* https://github.com/adafruit/Adafruit_Python_MCP9808 - This lib is use old version of I2C lib
+* https://github.com/philipcristiano/beagleboneblack/blob/master/mcp9808.py - This lib is used as a source
 
 Where to buy
 ============
