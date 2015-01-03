@@ -18,10 +18,10 @@ common_opts = [
             short='b',
             default="1",
             help='I2C bus'),
-    cfg.Opt('address',
-            short='a',
-            default="0x18",
-            help='I2C address'),
+#    cfg.Opt('address',
+#            short='a',
+#            default="0x18",
+#            help='I2C address'),
 ]
 
 CONF = cfg.CONF
