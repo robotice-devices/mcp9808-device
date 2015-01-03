@@ -7,16 +7,20 @@ For the Raspberry Pi this means you should hook up to the only exposed I2C bus f
 
 For the Beaglebone Black the library will assume bus 1 by default, which is exposed with SCL = P9_19 and SDA = P9_20.
 
-Tested: BB
-
 Requires: Adafruit_I2C
+
+Compatibility
+=============
+
+* BeagleBone - Not tested 
+* RaspberryPi - Not tested
 
 Usage
 =========
 
-Get readings from I2C bus 0
+Get readings from bus I2C-1 (P9_19, P9_20)
 
-    python driver.py -b 0
+    python driver.py -b 1
 
 Read more
 =========
