@@ -16,9 +16,8 @@ def get_data(sensor):
 #    address = sensor.get("address", 0x18)
 
     sensor = MCP9808.MCP9808(address=0x18)
-    sensor.begin()
-
     temp = sensor.read_temp_c()
+
     if temp > -40 and temp < 200:
         pass
     else:
