@@ -12,7 +12,7 @@ Requires: Adafruit_I2C
 Compatibility
 =============
 
-* BeagleBone - Not tested 
+* BeagleBone - Driver not working yet
 * RaspberryPi - Not tested
 
 Usage
