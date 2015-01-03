@@ -25,8 +25,9 @@ MCP9808_REG_DEVICE_ID = 0x07
 
 class MCP9808(object):
 
-    def __init__(self, address=0x18):
-        self._i2c = Adafruit_I2C(address)
+    def __init__(self, address=MCP9808_I2CADDR_DEFAULT, busnum=-1):
+        self._i2c = Adafruit_I2C(address=address, busnum=busnum)
+
         self._address = address
 
         # Assert it's the right thing
