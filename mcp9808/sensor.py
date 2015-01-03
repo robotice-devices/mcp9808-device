@@ -1,8 +1,7 @@
 #!/usr/bin/python
 
-import logging
 import MCP9808
-
+import logging
 LOG = logging.getLogger("robotice.monitor.mcp9808")
 
 def get_data(sensor):
