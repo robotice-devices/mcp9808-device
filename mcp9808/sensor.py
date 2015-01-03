@@ -10,9 +10,9 @@ def get_data(sensor):
     """
 
     name = sensor.get("name")
-    address = sensor.get("address", 0x18)
-    bus = int(sensor.get("bus", '1'))
-
+#    address = sensor.get("address", 0x18)
+#    bus = int(sensor.get("bus", '1'))
+    bus = 1
     sensor = MCP9808.MCP9808(address=0x18, busnum=bus)
     sensor.begin()
 
