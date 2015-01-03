@@ -31,10 +31,12 @@ class MCP9808(object):
         self._address = address
 
         # Assert it's the right thing
-        if self._readU16(MCP9808_REG_MANUF_ID) != 0x0054:
-            logger.error('Not right manufacturer (0x54): %s' % val)
-        if self._readU16(MCP9808_REG_DEVICE_ID) != 0x0400:
-            logger.error('Not right device ID (0x4): %s' % val)
+        mid = self._readU16(MCP9808_REG_MANUF_ID) 
+        if mid != 0x0054:
+            logger.error('Not right manufacturer (0x54): %s' % mid)
+        did = self._readU16(MCP9808_REG_DEVICE_ID) 
+        if did != 0x0400:
+            logger.error('Not right device ID (0x4): %s' % did)
 
     def _readU16(self, reg):
         ret = self._i2c.readList(reg, 2)
