@@ -1,8 +1,10 @@
 #!/usr/bin/python
 
-import MCP9808
 import logging
-LOG = logging.getLogger("robotice.monitor.mcp9808")
+
+import MCP9808
+
+LOG = logging.getLogger("robotice.sensor.mcp9808")
 
 def get_data(sensor):
     """
@@ -10,9 +12,9 @@ def get_data(sensor):
     """
 
     name = sensor.get("name")
+    bus = int(sensor.get("bus", '1'))
 #    address = sensor.get("address", 0x18)
-#    bus = int(sensor.get("bus", '1'))
-    bus = 1
+
     sensor = MCP9808.MCP9808(address=0x18, busnum=bus)
     sensor.begin()
 
@@ -24,7 +26,7 @@ def get_data(sensor):
         temp = None
   
     values = [
-        ('%s.temperature' % name, temp,),
+        ('%s.temperature' % name, temp, ),
     ]
 
     return values
