@@ -1,6 +1,6 @@
 
 ================================
-MCP9808 - I2C temperature sensor
+MCP9808 - I2C Temperature Sensor
 ================================
 
 For the Raspberry Pi this means you should hook up to the only exposed I2C bus from the main GPIO header and the library will figure out the bus number based on the Pi's revision.
@@ -13,7 +13,7 @@ Compatibility
 =============
 
 * BeagleBone - Driver not working yet
-* RaspberryPi - Not tested
+* Raspberry Pi - Not tested
 
 Usage
 =========
