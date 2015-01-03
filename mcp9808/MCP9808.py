@@ -41,7 +41,7 @@ class MCP9808(object):
     def _readU16(self, reg):
         ret = self._i2c.readList(reg, 2)
         if ret == -1:
-            return None
+            return ret
         else:
             return (ret[0] << 8) + ret[1]
 
