@@ -1,5 +1,9 @@
 
+import logging
+
 from Adafruit_I2C import Adafruit_I2C
+
+logger = logging.getLogger("MCP9808")
 
 class MCP9808(object):
 
@@ -10,6 +14,8 @@ class MCP9808(object):
         # Assert it's the right thing
         val = hex(self._i2c.reverseByteOrder(self._i2c.readU16(0x06)))
         print val
+        if val != 0x54:
+            logger.warning('Not right manufacturer (0x54): %s' val)
 #        assert val == 0x54, 'Not right manufacturer'
         val = hex(self._i2c.reverseByteOrder(self._i2c.readU16(0x07)))
         print val
